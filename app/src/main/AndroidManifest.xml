@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissão para acesso à internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="VaiEVemClienteMobile"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VaiEVemClienteMobile"
+        tools:targetApi="31">
+
+        <!-- SplashActivity: Tela inicial do aplicativo -->
+        <activity
+            android:name=".view.Splashscreen"
+            android:exported="true"
+            android:theme="@style/Theme.VaiEVemClienteMobile.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity: Atividade principal -->
+        <activity
+            android:name=".view.MainActivity"
+            android:exported="false"
+            android:label="VaiEVemClienteMobile"
+            android:theme="@style/Theme.VaiEVemClienteMobile.NoActionBar" />
+
+    </application>
+
+</manifest>

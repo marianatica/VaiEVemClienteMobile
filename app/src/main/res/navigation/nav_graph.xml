@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.VaiEVemClienteMobile.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/acao_LoginFragment_MenuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.VaiEVemClienteMobile.view.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/acao_MenuFragment_CadastroMarcaFragment"
+            app:destination="@id/cadastroMarcaFragment" />
+        <action
+            android:id="@+id/acao_MenuFragment_CadastroBikeFragment"
+            app:destination="@id/cadastroBikeFragment" />
+        <action
+            android:id="@+id/acao_MenuFragment_VisualizacaoBikeFragment"
+            app:destination="@id/visualizacaoBikeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroMarcaFragment"
+        android:name="com.example.VaiEVemClienteMobile.view.CadastroMarcaFragment"
+        android:label="fragment_cadastro_marca"
+        tools:layout="@layout/fragment_cadastro_marca" />
+    <fragment
+        android:id="@+id/cadastroBikeFragment"
+        android:name="com.example.VaiEVemClienteMobile.view.CadastroBikeFragment"
+        android:label="fragment_cadastro_bike"
+        tools:layout="@layout/fragment_cadastro_bike" />
+    <fragment
+        android:id="@+id/visualizacaoBikeFragment"
+        android:name="com.example.VaiEVemClienteMobile.view.VisualizacaoBikeFragment"
+        android:label="fragment_visualizacao_bike"
+        tools:layout="@layout/fragment_visualizacao_bike" />
+</navigation>
